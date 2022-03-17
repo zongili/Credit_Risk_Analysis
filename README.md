@@ -16,10 +16,10 @@ Last two models 'balanced random forest' and 'easy ensemble adaboost' are ensemb
 - Naive Random Oversampling:
 Oversampling addresses class imbalance by duplicating or mimicking existing data. In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. Next, the dataset is split into training and testing sets, then randomly oversampled the minority class with the imblearn library. 
 The following image examines the classification report to assess the results. While precision ("pre" column) is low for the high_risk class, precision is high for the low_risk class. Recall ("rec" column) are for high and low risk are 0.57 and 0.68.  
- - Accuracy score: 0.64
- - Precision: high risk: 0.01 and low risk: 1.00
- - Recall: high risk: 0.57 and low risk: 0.68
- - F1: high risk: 0.02 and low risk: 0.81
+    - Accuracy score: 0.64
+    - Precision: high risk: 0.01 and low risk: 1.00
+    - Recall: high risk: 0.57 and low risk: 0.68
+    - F1: high risk: 0.02 and low risk: 0.81
 
 ![This is an image for Naive Random Oversampling](images/random-oversampling.PNG)
 
@@ -27,48 +27,48 @@ The following image examines the classification report to assess the results. Wh
 The synthetic minority oversampling technique (SMOTE) is another oversampling approach to deal with unbalanced datasets. In SMOTE, like random oversampling, the size of the minority is increased. In SMOTE, by contrast, new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created. The following image examines the classification report to assess the results.
 
 The metrics of the minority class (precision, recall, and F1 score) are slightly lower over those of random oversampling.
- - Accuracy score: 0.627
- - Precision: high risk: 0.01 and low risk: 1.00
- - Recall: high risk: 0.62 and low risk: 0.63
- - F1: high risk: 0.02 and low risk: 0.78
+    - Accuracy score: 0.627
+    - Precision: high risk: 0.01 and low risk: 1.00
+    - Recall: high risk: 0.62 and low risk: 0.63
+    - F1: high risk: 0.02 and low risk: 0.78
 
 ![This is an image for SMOTE Oversampling](images/smote-oversampling.PNG)
 
 - Undersampling - Cluster Centroids:
 In oversampling, the smaller class is resampled to make it larger. Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased. Undersampling only uses actual data. On the other hand, undersampling involves loss of data from the majority class. Furthermore, undersampling is practical only when there is enough data in the training set.
 The algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class. The metrics of the minority class (precision, recall, and F1 score) are lower over those of oversampling.
- - Accuracy score: 0.627
- - Precision: high risk: 0.01 and low risk: 1.00
- - Recall: high risk: 0.59 and low risk: 0.43
- - F1: high risk: 0.01 and low risk: 0.60
+    - Accuracy score: 0.627
+    - Precision: high risk: 0.01 and low risk: 1.00
+    - Recall: high risk: 0.59 and low risk: 0.43
+    - F1: high risk: 0.01 and low risk: 0.60
 
 ![This is an image for Undersampling - Cluster Centroids](images/undersampling.PNG)
 
 - Combination (Over and Under) Sampling - with SMOTEENN: 
 An approach to resampling that combines aspects of both oversampling and undersampling. SMOTEENN is a two-step process: One is: Oversample the minority class with SMOTE. Second is: Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 The pre and rec results show an improvement over undersampling. F1 and recall values improved with over and under combination sampling model.
- - Accuracy score: 0.51
- - Precision: high risk: 0.01 and low risk: 1.00
- - Recall: high risk: 0.70 and low risk: 0.58
- - F1: high risk: 0.02 and low risk: 0.73
+    - Accuracy score: 0.51
+    - Precision: high risk: 0.01 and low risk: 1.00
+    - Recall: high risk: 0.70 and low risk: 0.58
+    - F1: high risk: 0.02 and low risk: 0.73
 
 ![This is an image for Combination (Over and Under) Sampling](images/combination.PNG)
 
 - Balanced Random Forest Classifier:
 Random forest algorithm will sample the data and build several smaller, simpler decision trees. Each tree is simpler because it is built from a random subset of features. The pre and rec results show an improvement over resampling models for the risky loan.
-   - Accuracy score: 0.78
-   - Precision: high risk: 0.04 and low risk: 1.00
-   - Recall: high risk: 0.67 and low risk: 0.91
-   - F1: high risk: 0.07 and low risk: 0.95
+    - Accuracy score: 0.78
+    - Precision: high risk: 0.04 and low risk: 1.00
+    - Recall: high risk: 0.67 and low risk: 0.91
+    - F1: high risk: 0.07 and low risk: 0.95
 
 ![This is an image for Balanced Random Forest Classifier](images/balancedforest.PNG)
 
 - Easy Ensemble AdaBoost Classifier:
 The idea behind Adaptive Boosting In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. This process is repeated until the error rate is minimized. The pre and rec results show an improvement over balanced random forest classifier and resampling models.
-   - Accuracy score: 0.92
-   - Precision: high risk: 0.07 and low risk: 1.00
-   - Recall: high risk: 0.91 and low risk: 0.94
-   - F1: high risk: 0.14 and low risk: 0.97
+    - Accuracy score: 0.92
+    - Precision: high risk: 0.07 and low risk: 1.00
+    - Recall: high risk: 0.91 and low risk: 0.94
+    - F1: high risk: 0.14 and low risk: 0.97
 
 ![This is an image for Easy Ensemble AdaBoost Classifier](images/ensemble.PNG)
 

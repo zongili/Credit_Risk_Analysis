@@ -56,19 +56,19 @@ The pre and rec results show an improvement over undersampling. F1 and recall va
 
 - Balanced Random Forest Classifier:
 Random forest algorithm will sample the data and build several smaller, simpler decision trees. Each tree is simpler because it is built from a random subset of features. The pre and rec results show an improvement over resampling models for the risky loan.
- - Accuracy score: 0.78
- - Precision: high risk: 0.04 and low risk: 1.00
- - Recall: high risk: 0.67 and low risk: 0.91
- - F1: high risk: 0.07 and low risk: 0.95
+   - Accuracy score: 0.78
+   - Precision: high risk: 0.04 and low risk: 1.00
+   - Recall: high risk: 0.67 and low risk: 0.91
+   - F1: high risk: 0.07 and low risk: 0.95
 
 ![This is an image for Balanced Random Forest Classifier](images/balancedforest.PNG)
 
 - Easy Ensemble AdaBoost Classifier:
 The idea behind Adaptive Boosting In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. This process is repeated until the error rate is minimized. The pre and rec results show an improvement over balanced random forest classifier and resampling models.
- - Accuracy score: 0.92
- - Precision: high risk: 0.07 and low risk: 1.00
- - Recall: high risk: 0.91 and low risk: 0.94
- - F1: high risk: 0.14 and low risk: 0.97
+   - Accuracy score: 0.92
+   - Precision: high risk: 0.07 and low risk: 1.00
+   - Recall: high risk: 0.91 and low risk: 0.94
+   - F1: high risk: 0.14 and low risk: 0.97
 
 ![This is an image for Easy Ensemble AdaBoost Classifier](images/ensemble.PNG)
 

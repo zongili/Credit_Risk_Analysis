@@ -47,7 +47,7 @@ The algorithm identifies clusters of the majority class, then generates syntheti
 - __Combination (Over and Under) Sampling - with SMOTEENN:__
 An approach to resampling that combines aspects of both oversampling and undersampling. SMOTEENN is a two-step process: One is: Oversample the minority class with SMOTE. Second is: Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 The pre and rec results show an improvement over undersampling. F1 and recall values improved with over and under combination sampling model.
-    - Accuracy score: 0.51
+    - Accuracy score: 0.64
     - Precision: high risk: 0.01 and low risk: 1.00
     - Recall: high risk: 0.70 and low risk: 0.58
     - F1: high risk: 0.02 and low risk: 0.73
